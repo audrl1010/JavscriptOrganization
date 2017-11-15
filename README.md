@@ -1,14 +1,50 @@
 # JavscriptOrganization
-자바스크립트를 정리하는 저장소 입니다.
+자바스크립트 ECMAScripts5, ECMAScripts6를 정리하는 저장소 입니다.
 
-### 타입(Type), 값(Value), 변수(Variable)
+# 자료형(Data Type)
 
-변수선언 
+## 기본 자료형
+
+### Number
 ```javascript
-var name = '이름';
+var number = 3; // Number
 ```
 
-javaScript의 변수들은 타입(Type)이 정해져 있지 않다.
+### String
 ```javascript
-
+var name = 'name'; // String
 ```
+
+### Boolean
+```javascript
+var check = true; // Boolean
+```
+
+## 복합 자료형
+
+### 객체(Object)
+```javascript
+var object = { name: 'name', color: 'white' }; // Object
+```
+
+### 배열(Array)
+```javascript
+var names = ['a', 'b', 'c', 'd']; // Array Object
+```
+
+## 특수 자료형
+
+### undefined
+'값이 없음'을 나타낸다. 보통 변수가 초기화되어 있지 않은 경우, 존재하지 않는 객체 프로퍼티나 배열의 원소 값에 
+접근하려고 할 때 얻는 변수의 값이다. 또한 반환 값이 없는 함수와 인자가 없는 함수 매개변수의 값에 의해 반환된다.
+```javascript
+var name; // undefined
+```
+### null
+'아무 값도 갖지 않음'을 가리킬 때 사용된다.
+```javascript
+var name = null;
+```
+
+
+
