@@ -46,6 +46,62 @@ var name; // undefined
 var name = null;
 ```
 
+# 클래스
+
+## 상속
+```javascript
+// ES5
+function Parent(name) {
+  this.name = name;
+}
+
+Parent.prototype.getName = function() {
+  return this.name;
+}
+
+function Child(name) {
+  Parent.call(this, name);
+  this.age = 0;
+}
+
+Child.prototype = Object.create(Parent.prototype);
+Child.prototype.constructor = Child;
+
+Child.prototype.getAge = function() {
+  return this.age;
+}
+
+let c = new Child("name");
+```
+
+```javascript
+// ES6
+class Parent {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+class Child extends Parent {
+  constructor(name) {
+    super(name);
+    this.age = 0;
+  }
+
+  getAge() {
+    return this.age;
+  }
+}
+
+let c = new Child("name");
+```
+
+
+
 # 모듈
 
 
